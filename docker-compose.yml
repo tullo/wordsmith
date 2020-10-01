@@ -12,5 +12,7 @@ services:
   words:
     build: words
     environment:
+      PGHOST: db
+      PGPORT: 5432
+      PGUSER: postgres
       PGPASSWORD: verysecretpassword
-
