@@ -1,4 +1,4 @@
-FROM maven:3.6.3-openjdk-15-slim
+FROM maven:3.6.3-openjdk-16-slim
 
 # Copy the file describing the dependencies first.
 COPY pom.xml .
@@ -20,7 +20,7 @@ COPY src src
 RUN mvn verify
 
 # Start a new stage.
-FROM openjdk:8-jre-alpine
+FROM openjdk:16-jdk-alpine3.12
 
 # Copy the "target" directory.
 COPY --from=0 /target /target
