@@ -1,4 +1,4 @@
-FROM golang:1.15.5-alpine3.12 as build_stage
+FROM golang:1.15.6-alpine3.12 as build_stage
 ENV CGO_ENABLED 0
 
 # Copy only the source file. We do not need the "static"
