@@ -1,4 +1,4 @@
-FROM golang:1.15.6-alpine3.12 as build_stage
+FROM golang:1.16.0-alpine3.13 as build_stage
 ENV CGO_ENABLED 0
 
 # Copy only the source file. We do not need the "static"
@@ -9,7 +9,7 @@ COPY dispatcher.go .
 RUN go build dispatcher.go
 
 # Start a new stage.
-FROM alpine:3.12
+FROM alpine:3.13.2
 
 # Copy the binary.
 # Note that the golang image uses /go as the WORKDIR.
