@@ -1,4 +1,4 @@
-FROM maven:3.6.3-openjdk-16-slim
+FROM maven:3.8.3-openjdk-16-slim
 
 # Copy the file describing the dependencies first.
 COPY pom.xml .
