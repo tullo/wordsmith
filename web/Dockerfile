@@ -9,7 +9,7 @@ COPY dispatcher.go .
 RUN go build dispatcher.go
 
 # Start a new stage.
-FROM alpine:3.13.2
+FROM alpine:3.21.0
 
 # Copy the binary.
 # Note that the golang image uses /go as the WORKDIR.
