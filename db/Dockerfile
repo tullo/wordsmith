@@ -1,4 +1,4 @@
-FROM postgres:13.1-alpine
+FROM postgres:13.18-alpine
 
 # The postgres official image has a "magic" entrypoint,
 # that will automatically execute scripts and load .sql
