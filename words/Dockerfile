@@ -20,7 +20,7 @@ COPY src src
 RUN mvn verify
 
 # Start a new stage.
-FROM openjdk:16-jdk-alpine3.12
+FROM openjdk:17-jdk-alpine3.12
 
 # Copy the "target" directory.
 COPY --from=0 /target /target
