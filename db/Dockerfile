@@ -1,4 +1,4 @@
-FROM postgres:17.4-alpine
+FROM postgres:17.5-alpine
 
 # The postgres official image has a "magic" entrypoint,
 # that will automatically execute scripts and load .sql
